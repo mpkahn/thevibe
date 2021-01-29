@@ -1,5 +1,10 @@
-/* Body */
-body {
+/* Navbar */
+a {
+   color: white; 
+   font-family: 'Cinzel', serif;
+   }
+/* Content */
+   body {
     text-align: center;
     font-family: 'Cinzel', serif;
     font-weight: bolder;
@@ -9,12 +14,46 @@ body {
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
-      }
+}   
+h1 {
+
+    font-size: 32px;
+}
+
+ h3 {
+    font-size: 18px;
+}
+.content {
+margin: 0;
+padding: 0;
+border: 0;
 }
 .box {
     font-size: smaller;
+    margin-top: 30px;
+}
+h2 {
+    font-size: 20px;
+}
+/* Text box area */
+textarea{
+    font-size: 15px;
+    height: 30px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-navbar {
+button{
     color: white;
+    background-color: black;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
+/* Footer */
+#footer {
+    margin-bottom: 5vh;
+}
+
