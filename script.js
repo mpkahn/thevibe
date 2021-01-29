@@ -1,18 +1,17 @@
 let userInput = $("#user-input").val();
 
-
-$("#add-vibe").on("click", function(event) {
-userInput = $("#user-input").val();
-// let randomSelector = Math.floor(Math.random() * 15);
-// console.log(randomSelector);
-event.preventDefault()
-const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=" + userInput + "&key=AIzaSyAIRa_UYE_tGr5zwxbcAlrStZrQRhOL9PE";
-
-console.log(queryURL);
-console.log(userInput);
+$("#add-vibe").on("click", function (event) {
+  userInput = $("#user-input").val();
+  event.preventDefault()
 
 
-$.ajax({
+  const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + userInput + "&key=AIzaSyAIRa_UYE_tGr5zwxbcAlrStZrQRhOL9PE";
+
+  console.log(queryURL);
+  console.log(userInput);
+
+
+  $.ajax({
     url: queryURL,
     method: "GET"
   })
@@ -36,7 +35,19 @@ $.ajax({
     })
       .then(function(response) {
         console.log(response);
-        console.log(response.items[Math.floor(Math.random()*10)].volumeInfo.title);
+        
+      //appends book title
+      const bookTitle = (response.items[0].volumeInfo.title);
+      $("#vibe-form").append(bookTitle);
+
+      // appends book description
+      const bookInfo = (response.items[0].searchInfo.textSnippet);
+      $("#vibe-form").append(bookInfo);
+
+      // appends book author
+      const bookAuthor = (response.items[0].volumeInfo.authors);
+      $("#vibe-form").append(bookAuthor)
+
     });
     
     const queryURL3 = "https://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=55PxXERn6D1oI3276vKd8magCfZxroen";
