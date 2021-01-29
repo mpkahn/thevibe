@@ -1,11 +1,13 @@
 let userInput = $("#user-input").val();
+let randomNum = Math.floor(Math.random()*10);
+console.log(randomNum);
 
 $("#add-vibe").on("click", function (event) {
   userInput = $("#user-input").val();
   event.preventDefault()
 
 
-  const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + userInput + "&key=AIzaSyAIRa_UYE_tGr5zwxbcAlrStZrQRhOL9PE";
+  const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=" + userInput + "&key=AIzaSyAIRa_UYE_tGr5zwxbcAlrStZrQRhOL9PE";
 
   console.log(queryURL);
   console.log(userInput);
@@ -35,17 +37,18 @@ $("#add-vibe").on("click", function (event) {
     })
       .then(function(response) {
         console.log(response);
-        
+        randomNum = Math.floor(Math.random()*10);
+        console.log(randomNum);
       //appends book title
-      const bookTitle = (response.items[0].volumeInfo.title);
+      const bookTitle = (response.items[randomNum].volumeInfo.title);
       $("#vibe-form").append(bookTitle);
 
       // appends book description
-      const bookInfo = (response.items[0].searchInfo.textSnippet);
+      const bookInfo = (response.items[randomNum].searchInfo.textSnippet);
       $("#vibe-form").append(bookInfo);
 
       // appends book author
-      const bookAuthor = (response.items[0].volumeInfo.authors);
+      const bookAuthor = (response.items[randomNum].volumeInfo.authors);
       $("#vibe-form").append(bookAuthor)
 
     });
@@ -56,10 +59,11 @@ $("#add-vibe").on("click", function (event) {
       method: "GET"
     })
       .then(function(response) {
+        randomNum = Math.floor(Math.random()*10);
         console.log(response);
         const gifDiv = $("<div>");
         const vibeGif = $("<img>");
-        vibeGif.attr("src", response.data[Math.floor(Math.random()*10)].images.fixed_height.url);
+        vibeGif.attr("src", response.data[randomNum].images.fixed_height.url);
 
 
         gifDiv.prepend(vibeGif);
