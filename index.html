@@ -8,15 +8,19 @@
 </head>
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
     <div class="container">
-        <h1>Search for an Artist</h1>
-        <p>Enter vibe</p>
-        <form id="search-form">
-            <input type="text" id="query" value="" class="form-control" placeholder="Enter Vibe"/>
-            <input type="submit" id="search" class="btn btn-primary" value="Search" />
-        </form>
-        <div id="results"></div>
+        <h1>Search for a vibe</h1>
+        
+        <form id="vibe-form">
+            <label for="user-input">Add a vibe</label>
+            <input type="text" id="user-input"><br>
+      
+            <input id="add-vibe" type="submit" value="Submit">
+          </form>
+          <div id="results"></div>
     </div>
+    
   
     <script src="script.js"></script>
 </body>
