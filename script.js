@@ -29,8 +29,21 @@ $("#add-vibe").on("click", function (event) {
     method: "GET"
   })
     .then(function (response) {
-      console.log(response)
-      console.log(response.items[0])
+      console.log(response);
+      console.log(response.items[0]);
+
+      //appends book title
+      const bookTitle = (response.items[0].volumeInfo.title);
+      $("#vibe-form").append(bookTitle);
+
+      // appends book description
+      const bookInfo = (response.items[0].searchInfo.textSnippet);
+      $("#vibe-form").append(bookInfo);
+
+      // appends book author
+      const bookAuthor = (response.items[0].volumeInfo.authors);
+      $("#vibe-form").append(bookAuthor)
+
     })
 });
 
