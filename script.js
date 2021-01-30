@@ -9,6 +9,8 @@ $("#generate").on("click", function (event) {
   $("#bookCard").empty();
   $("#musicCard").empty();
   $("#vidCard").empty();
+  $("#bookTitle").empty();
+  $("#bookAuthor").empty();
   
 
 
@@ -45,20 +47,31 @@ $("#generate").on("click", function (event) {
         randomNum = Math.floor(Math.random()*10);
         console.log(randomNum);
 
-      const bookImg = document.createElement("img")
+      const bookImg = document.createElement("img");
+
       bookImg.setAttribute("src", response.items[randomNum].volumeInfo.imageLinks.thumbnail);
-      $("#bookCard").append(bookImg)
+      $(bookImg).addClass("book-image");
+      $(bookImg).attr({
+        "title": response.items[randomNum].volumeInfo.title
+      });
+      // $(bookImg).attr("src", response.items[randomNum].volumeInfo.industryIdentifiers.infoLink);
+      $("#bookCard").append(bookImg);
+
       //appends book title
       const bookTitle = (response.items[randomNum].volumeInfo.title);
-      $("#bookCard").append(bookTitle);
+      $("#bookTitle").append(bookTitle);
+      
+      $(bookTitle).attr({
+        "href" : response.items[randomNum].selfLink,
+      });
 
       // appends book author
       const bookAuthor = (response.items[randomNum].volumeInfo.authors);
-      $("bookCard").append(bookAuthor)
+      $("#bookAuthor").append(bookAuthor);
 
-      // appends book description
-      const bookInfo = (response.items[randomNum].searchInfo.textSnippet);
-      $("bookCard").append(bookInfo);
+      // // appends book description
+      // const bookInfo = (response.items[randomNum].searchInfo.textSnippet);
+      // $("#bookInfo").append(bookInfo);
 
    
       

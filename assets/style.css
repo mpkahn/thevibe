@@ -76,3 +76,21 @@ padding-left: 25px;
 .card-body {
     align-self: center;
 }
+
+.book-image {
+    align-self: center;
+}
+
+#bookTitle {
+    color:black;
+    font-size: 16px;
+    font-weight: bold;
+}
+#bookAuthor {
+    color:black;
+    font-size: 14px;
+}
+#bookInfo {
+    color:black;
+    font-size: 12px;
+}
