@@ -1,10 +1,15 @@
-let userInput = $("#user-input").val();
+let userInput = $("#vibeCheck").val();
 let randomNum = Math.floor(Math.random()*10);
 console.log(randomNum);
 
-$("#add-vibe").on("click", function (event) {
-  userInput = $("#user-input").val();
+$("#generate").on("click", function (event) {
   event.preventDefault()
+  userInput = $("#vibeCheck").val();
+  $(".card-group").removeClass("vibeContent");
+  $("#bookCard").empty();
+  $("#musicCard").empty();
+  $("#vidCard").empty();
+  
 
 
   const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=" + userInput + "&key=AIzaSyAIRa_UYE_tGr5zwxbcAlrStZrQRhOL9PE";
@@ -25,7 +30,7 @@ $("#add-vibe").on("click", function (event) {
     // const videoLink= "youtube.com/watch?v=" + vidId;
       let iFrame = document.createElement("iframe");
       iFrame.setAttribute("src", "http://www.youtube.com/embed/" + vidId);
-      $("#vibe-form").append(iFrame);
+      $(".vidContent").append(iFrame);
 
     });
 
@@ -39,21 +44,24 @@ $("#add-vibe").on("click", function (event) {
         console.log(response);
         randomNum = Math.floor(Math.random()*10);
         console.log(randomNum);
-      //appends book title
-      const bookTitle = (response.items[randomNum].volumeInfo.title);
-      $("#vibe-form").append(bookTitle);
-
-      // appends book description
-      const bookInfo = (response.items[randomNum].searchInfo.textSnippet);
-      $("#vibe-form").append(bookInfo);
-
-      // appends book author
-      const bookAuthor = (response.items[randomNum].volumeInfo.authors);
-      $("#vibe-form").append(bookAuthor)
 
       const bookImg = document.createElement("img")
       bookImg.setAttribute("src", response.items[randomNum].volumeInfo.imageLinks.thumbnail);
-      $("#vibe-form").append(bookImg)
+      $("#bookCard").append(bookImg)
+      //appends book title
+      const bookTitle = (response.items[randomNum].volumeInfo.title);
+      $("#bookCard").append(bookTitle);
+
+      // appends book author
+      const bookAuthor = (response.items[randomNum].volumeInfo.authors);
+      $("bookCard").append(bookAuthor)
+
+      // appends book description
+      const bookInfo = (response.items[randomNum].searchInfo.textSnippet);
+      $("bookCard").append(bookInfo);
+
+   
+      
       
       
     });
@@ -73,7 +81,7 @@ $("#add-vibe").on("click", function (event) {
 
         gifDiv.prepend(vibeGif);
 
-        $("#vibe-form").prepend(gifDiv);
+        $("#musicCard").prepend(gifDiv);
         
 });
 
