@@ -51,6 +51,11 @@ $("#add-vibe").on("click", function (event) {
       const bookAuthor = (response.items[randomNum].volumeInfo.authors);
       $("#vibe-form").append(bookAuthor)
 
+      const bookImg = document.createElement("img")
+      bookImg.setAttribute("src", response.items[randomNum].volumeInfo.imageLinks.thumbnail);
+      $("#vibe-form").append(bookImg)
+      
+      
     });
     
     const queryURL3 = "https://api.giphy.com/v1/gifs/search?q=" + userInput + "&api_key=55PxXERn6D1oI3276vKd8magCfZxroen";
