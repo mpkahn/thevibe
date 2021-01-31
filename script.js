@@ -52,18 +52,17 @@ $("#generate").on("click", function (event) {
       bookImg.setAttribute("src", response.items[randomNum].volumeInfo.imageLinks.thumbnail);
       $(bookImg).addClass("book-image");
       $(bookImg).attr({
-        "title": response.items[randomNum].volumeInfo.title
+        "title": response.items[randomNum].volumeInfo.title,
       });
-      // $(bookImg).attr("src", response.items[randomNum].volumeInfo.industryIdentifiers.infoLink);
       $("#bookCard").append(bookImg);
 
       //appends book title
       const bookTitle = (response.items[randomNum].volumeInfo.title);
-      $("#bookTitle").append(bookTitle);
-      
-      $(bookTitle).attr({
-        "href" : response.items[randomNum].selfLink,
-      });
+      const bookLink = response.items[randomNum].volumeInfo.previewLink;
+      console.log(bookLink);
+      // $("#bookTitle").append(bookTitle);
+      $("#bookTitle").append($("<a>" + bookTitle + "</a>").attr("href",  bookLink));
+
 
       // appends book author
       const bookAuthor = (response.items[randomNum].volumeInfo.authors);

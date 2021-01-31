@@ -25,8 +25,8 @@ h1 {
 }
 .content {
     margin: 0;
-padding: 0;
-border: 0;
+    padding: 0;
+    border: 0;
 }
 .box {
     font-size: smaller;
@@ -36,12 +36,16 @@ h2 {
     font-size: 20px;
 }
 /* Text box area */
-textarea{
+input{
     font-size: 15px;
     height: 30px;
     padding: 10px 30px;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+a {
+    color:blue;
 }
 
 button{
