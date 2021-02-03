@@ -11,8 +11,8 @@ $("#generate").on("click", function (event) {
   $("#vidCard").empty();
   $("#bookTitle").empty();
   $("#bookAuthor").empty();
-  
 
+ 
 
   const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=" + userInput + "&key=AIzaSyAIRa_UYE_tGr5zwxbcAlrStZrQRhOL9PE";
 
@@ -97,6 +97,9 @@ $("#generate").on("click", function (event) {
         
 });
 
+    localStorage.setItem('inputs', userInput);
+    let pastVibe = localStorage.getItem('inputs');
+    $("#pastVibe").append("<ul>" + pastVibe + "</ul>").val();
 
 
 
