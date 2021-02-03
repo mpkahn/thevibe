@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS Stylesheet-->
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat&display=swap" rel="stylesheet">
+    <title>The Vibe</title>
+</head>
+<!-- content -->
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- logo image on top left corner-->
+    <nav class="navbar">
+        <a class="navbar-brand" href='#' onclick='location.reload(true); return false;'>
+            Vibe Check
+        </a>
+    </nav>
+    <!-- header content -->
+    <header class="top">
+        <br>
+        <h1>Vibe Check-er-ator</h1>
+        <h3>Powered by The Marvelous Bacon Sensation</h3>
+        <hr>
+    </header>
+    <!-- Box content for search -->
+    <div class="content">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 centered">
+                <div class="box">
+                    
+                    <input id="vibeCheck" placeholder="How are you feeling?"
+                    aria-label=" Vibe Checker"></input>
+                    <br>
+                    <button id="generate">Check-er-ate</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card recents vibeContent">
+              <div class="card-body">
+                <ul id="recent-title"><h6 id="recent-header">Recent Vibes</h6></ul>
+        
+               
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="card-group vibeContent">
+             <!--youtube card-->
+            <div class="card main-content">
+                <div id="vidCard" class="card-body row vidContent">
+
+              </div>
+              <div class="card-footer">
+                <small class="text-white">Video</small>
+              </div>
+            </div>
+            <!--book card-->
+            <div class="card main-content">
+              <div id="bookCard" class="card-body row">
+              </div>
+              <div id="bookTitle"></div>
+              <div id="bookAuthor"></div>
+              <div id="bookInfo"></div>
+              <div class="card-footer">
+                <small class="text-white">Book</small>
+              </div>
+            </div>
+        <!--giphy card-->
+            <div class="card main-content">
+              <div id="musicCard" class="card-body row">
+               
+                
+              </div>
+              <div class="card-footer">
+                <small class="text-white">Gif</small>
+              </div>
+            </div>
+          </div>
+    </div>
+    <br>
+    <!-- copyright footer on bottom page -->
+    <footer class="footer" id="footer">
+        <div class="container text-center">
+            Copyright &copy;
+        </div>
+    </footer>
+    <!-- link for JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Navbar */
+a {
+   color: white; 
+   font-family: 'Cinzel', serif;
+   }
+/* Content */
+   body {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-weight: bolder;
+    color: white;
+        background: url('https://cdn.hipwallpaper.com/i/49/48/URLeDl.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+}   
+h1 {
+
+    font-size: 32px;
+}
+
+ h3 {
+    font-size: 18px;
+}
+.content {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.box {
+    font-size: smaller;
+    margin-top: 30px;
+}
+h2 {
+    font-size: 20px;
+}
+/* Text box area */
+input{
+    font-size: 15px;
+    height: 30px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    color:skyblue;
+}
+
+button{
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Footer */
+#footer {
+    margin-bottom: 5vh;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center/space-between;
+    color: black;
+    font-size: 12px;
+
+}
+
+.vibeContent {
+    display: none;
+}
+
+.card-body {
+    align-self: center;
+}
+
+.book-image {
+    align-self: center;
+}
+
+#bookTitle {
+    color:black;
+    font-size: 16px;
+    font-weight: bold;
+}
+#bookAuthor {
+    color:black;
+    font-size: 14px;
+}
+#bookInfo {
+    color:black;
+    font-size: 12px;
+}
+
+.navbar-brand {
+    font-family: 'Monoton', cursive;
+    color: white;
+    font-size: 32px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#vibeCheck {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.recents {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#recent-header {
+    text-decoration: underline;
+}
+
+ul {
+    text-align: center;
+    padding: initial;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-content {
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+}
+
+.card {
+    background-color: rgb(36, 36, 36);
+    color:white
+}
+
+h6 {
+    color: white;
+}
+
+#bookAuthor {
+    color: white;
+}
+
