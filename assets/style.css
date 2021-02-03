@@ -45,7 +45,7 @@ input{
 }
 
 a {
-    color:blue;
+    color:skyblue;
 }
 
 button{
@@ -68,6 +68,7 @@ button{
     justify-content: center/space-between;
     color: black;
     font-size: 12px;
+
 }
 
 .vibeContent {
@@ -102,7 +103,7 @@ button{
     font-size: 32px;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -114,3 +115,33 @@ h1, h2, h3, h4, h5 {
     margin-left: 15%;
     margin-right: 15%;
 }
+
+#recent-header {
+    text-decoration: underline;
+}
+
+ul {
+    text-align: center;
+    padding: initial;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-content {
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+}
+
+.card {
+    background-color: rgb(36, 36, 36);
+    color:white
+}
+
+h6 {
+    color: white;
+}
+
+#bookAuthor {
+    color: white;
+}
+

@@ -15,27 +15,27 @@ $("#generate").on("click", function (event) {
   
 
 
-  // const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=" + userInput + "&key=AIzaSyAIRa_UYE_tGr5zwxbcAlrStZrQRhOL9PE";
+  const queryURL = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=" + userInput + "&key=AIzaSyAIRa_UYE_tGr5zwxbcAlrStZrQRhOL9PE";
 
-  // console.log(queryURL);
-  // console.log(userInput);
+  console.log(queryURL);
+  console.log(userInput);
 
 
-  // $.ajax({
-  //   url: queryURL,
-  //   method: "GET"
-  // })
-  //   .then(function(response) {
-  //     console.log(response)
-  //     console.log(response.items[Math.floor(Math.random()*15)]);
-  //   const vidId = (response.items[Math.floor(Math.random()*15)].id.videoId);
-  //   $("#vibe-form").append("www.youtube.com/watch?v=" + vidId);
-  //   // const videoLink= "youtube.com/watch?v=" + vidId;
-  //     let iFrame = document.createElement("iframe");
-  //     iFrame.setAttribute("src", "http://www.youtube.com/embed/" + vidId);
-  //     $(".vidContent").append(iFrame);
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+    .then(function(response) {
+      console.log(response)
+      console.log(response.items[Math.floor(Math.random()*15)]);
+    const vidId = (response.items[Math.floor(Math.random()*15)].id.videoId);
+    $("#vibe-form").append("www.youtube.com/watch?v=" + vidId);
+    // const videoLink= "youtube.com/watch?v=" + vidId;
+      let iFrame = document.createElement("iframe");
+      iFrame.setAttribute("src", "http://www.youtube.com/embed/" + vidId);
+      $(".vidContent").append(iFrame);
 
-  //   });
+    });
 
     const queryURL2 = "https://books.googleapis.com/books/v1/volumes?q=" + userInput + "&key=AIzaSyAIRa_UYE_tGr5zwxbcAlrStZrQRhOL9PE";
 
@@ -100,9 +100,7 @@ $("#generate").on("click", function (event) {
 
 localStorage.setItem('inputs', userInput);
 let pastVibe = localStorage.getItem('inputs');
-// $("#musicCard").append(pastVibe).val();
-console.log(pastVibe);
-
+$("#recent-title").append("<ul>" + pastVibe + "</ul>").val();
 });
 
 
