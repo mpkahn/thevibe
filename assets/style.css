@@ -55,6 +55,7 @@ button{
     padding: 10px 30px;
     border-radius: 10px;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 /* Footer */
 #footer {
@@ -67,10 +68,6 @@ button{
     justify-content: center/space-between;
     color: black;
     font-size: 12px;
-}
-
-img {
-padding-left: 25px;
 }
 
 .vibeContent {
@@ -97,4 +94,23 @@ padding-left: 25px;
 #bookInfo {
     color:black;
     font-size: 12px;
+}
+
+.navbar-brand {
+    font-family: 'Monoton', cursive;
+    color: white;
+    font-size: 32px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#vibeCheck {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.recents {
+    margin-left: 15%;
+    margin-right: 15%;
 }

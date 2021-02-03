@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/style.css">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat&display=swap" rel="stylesheet">
     <title>The Vibe</title>
 </head>
 <!-- content -->
@@ -18,9 +20,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- logo image on top left corner-->
     <nav class="navbar">
-        <a class="navbar-brand" href="#">
-            <img src="assets/images/TheVibe3.jpn.png" width="60" height="55" alt="">
-            The Vibes
+        <a class="navbar-brand" href='#' onclick='location.reload(true); return false;'>
+            Vibe Check
         </a>
     </nav>
     <!-- header content -->
@@ -33,8 +34,8 @@
     <!-- Box content for search -->
     <div class="content">
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-md-8 centered">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 centered">
                 <div class="box">
                     <h2>Generator</h2>
                     <input id="vibeCheck" placeholder="How are you feeling?"
@@ -42,6 +43,13 @@
                     <br>
                     <button id="generate">Vibes</button>
                 </div>
+            </div>
+            <div class="col-md-4">
+            <div class="card recents vibeContent">
+              <div class="card-body recent-list">
+                <h6>Recent Vibes</h6>
+              </div>
+            </div>
             </div>
         </div>
         <div class="card-group vibeContent">
