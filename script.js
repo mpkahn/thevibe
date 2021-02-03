@@ -32,7 +32,7 @@ $("#generate").on("click", function (event) {
     $("#vibe-form").append("www.youtube.com/watch?v=" + vidId);
     // const videoLink= "youtube.com/watch?v=" + vidId;
       let iFrame = document.createElement("iframe");
-      iFrame.setAttribute("src", "http://www.youtube.com/embed/" + vidId);
+      iFrame.setAttribute("src", "https://www.youtube.com/embed/" + vidId);
       $(".vidContent").append(iFrame);
 
     });
